@@ -20,7 +20,7 @@ https://open.kakao.com/o/gXaUzu1b
 
 */
 
-const PackageFuncs = {
+PackageFuncs = {
     getAllPackageName : function () {
         let pkgs = [];
         let pack = Api.getContext().getPackageManager().getInstalledPackages(0);
