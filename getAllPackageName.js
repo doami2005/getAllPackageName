@@ -21,7 +21,7 @@ https://open.kakao.com/o/gXaUzu1b
 */
 
 const PackageFuncs = {
-    getAllPackageName = function () {
+    getAllPackageName : function () {
         let pkgs = [];
         let pack = Api.getContext().getPackageManager().getInstalledPackages(0);
         for (let i = 0; i < pack.size(); i++) {
@@ -29,7 +29,7 @@ const PackageFuncs = {
         }
         return pkgs;
     },
-    getAppName = function (packageName) {
+    getAppName : function (packageName) {
         let pm = Api.getContext().getPackageManager();
         let info = pm.getApplicationInfo(packageName, android.content.pm.PackageManager.GET_UNINSTALLED_PACKAGES);
         return pm.getApplicationLabel(info).toString();
